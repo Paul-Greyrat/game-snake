@@ -16,19 +16,19 @@ let currentScoreElem = document.getElementById('current-score');
 let highScoreElem = document.getElementById('high-score');
 
 // Initialize game state
-function InitializeGame(){
-    //set initial snake segments
+function InitializeGame(){ 
+    //set initial snake segments 
     snake = [
         {
             x: Math.floor(canvas.width / 2 / GRID_SIZE) * 
             GRID_SIZE, y: Math.floor(canvas.height / 2 / 
             GRID_SIZE) * GRID_SIZE },
-        {
+        { 
             x: Math.floor(canvas.width / 2 / GRID_SIZE) * 
             GRID_SIZE, y: (Math.floor(canvas.height / 2 / 
             GRID_SIZE) + 1) * GRID_SIZE },
     ];
-    //set the initial food position and direction 
+    //set the initial food position and direction  
     food = {
         ...generateFoodPosition(),
         dx: (Math.random() < 0.5 ? 1 : -1) * GRID_SIZE,
